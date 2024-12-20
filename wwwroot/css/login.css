@@ -1,0 +1,106 @@
+﻿body {
+    margin: 0;
+    font-family: 'Open Sauce Sans', sans-serif;
+}
+
+p {
+    margin: 0;
+    font-size: 2vh;
+}
+
+#page-wrapper {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background: linear-gradient(150deg,rgb(22, 170, 255), rgb(0, 81, 255));
+    background-repeat: no-repeat;
+}
+
+#robot {
+    position: absolute;
+    height: 10vh;
+    object-fit: contain;
+    top: -8.5vh;
+    right: 1vh;
+}
+
+#container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: white;
+    margin: auto;
+    padding: 2vh;
+    border-radius: 3vh;
+    max-width: 25vh;
+    position: relative;
+}
+
+#login-form {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+}
+
+    #login-form label {
+        margin-left: 1.5vh;
+        margin-bottom: .5vh;
+        margin-top: 1vh;
+        font-size: 1.5vh;
+    }
+
+    #login-form input {
+        font-family: inherit;
+        padding: 1vh;
+        padding-left: 1.5vh;
+        border-radius: 3vh;
+        border: 1px solid #ccc;
+        margin-bottom: 1vh;
+        font-size: 1.5vh;
+    }
+
+    #login-form button {
+        font-size: 1.5vh;
+        border-style: none;
+        font-family: inherit;
+        padding: 1vh;
+        border-radius: 3vh;
+        background: linear-gradient(150deg,rgb(0, 0, 0), rgb(0, 0, 0));
+        color: white;
+        cursor: pointer;
+        transition: background .5s ease-in-out;
+    }
+
+        #login-form button:hover {
+            background: linear-gradient(150deg,rgb(22, 170, 255), rgb(0, 81, 255));
+        }
+
+    #login-form span {
+        display: flex;
+        justify-content: end;
+        align-items: center;
+        gap: 1vh;
+        text-align: right;
+        color: #666666;
+        margin-bottom: 2vh;
+    }
+
+        #login-form span label {
+            margin: 0;
+        }
+
+        #login-form span input {
+            width: 1.5vh;
+            height: 1.5vh;
+            margin: 0;
+        }
+
+#logo {
+    width: 100%;
+    margin: 0 auto;
+    display: block;
+    object-fit: contain;
+}

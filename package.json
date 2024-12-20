@@ -1,0 +1,6 @@
+{
+  "dependencies": {
+    "electron": "^22.3.27",
+    "electron-store": "^10.0.0"
+  }
+}

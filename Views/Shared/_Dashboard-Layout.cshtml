@@ -1,0 +1,129 @@
+﻿@{
+}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="~/resources/intelliguide_icon.png">
+    <title>intelliGuide Dashboard</title>
+    <link rel="stylesheet" href="~/css/sidebar.css">
+    <link rel="stylesheet" href="~/css/navbar.css">
+    <link rel="stylesheet" href="~/css/dashboard.css">
+    <script src="~/js/sidebar.js" defer></script>
+    <script src="~/js/navbar.js" defer></script>
+    <link rel="stylesheet" href="https://use.typekit.net/biq6ldp.css">
+    <link href="https://fonts.cdnfonts.com/css/open-sauce-one" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.1/css/all.min.css" integrity="sha512-5Hs3dF2AEPkpNAR7UiOHba+lRSJNeM2ECkwxUIxC1Q/FLycGTbNapWXB4tP889k5T5Ju8fs4b1P5z/iB4nMfSQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+<body>
+    <div id="page-wrapper">
+        <div class="grid">
+            <div id="sidebar" class="sidebar collapsed">
+                <div class="resizer" id="resizer">
+                    <i class="fa-solid fa-chevron-left"></i>
+                </div>
+                <div class="sidebar-top">
+                    <span class="logo-bar">
+                        <img class="logo" src="~/resources/intelliguide_icon_white.png" alt="logo">
+                        <h1>Dashboard</h1>
+                    </span>
+                    <ul class="list bots" id="bot-list">
+                        <li class="bot-item">
+                            <span>
+                                <img id="avatar" src="~/resources/intelliguide_icon.png" alt="avatar">
+                                <p id="bot-name">Bot 1</p>
+                            </span>
+                            <span>
+                                <p id="bot-status">Status</p>
+                                <div id="bot-status-indicator"></div>
+                            </span>
+                        </li>
+                        <li class="bot-item">
+                            <span>
+                                <img id="avatar" src="~/resources/intelliguide_icon.png" alt="avatar">
+                                <p id="bot-name">Bot 2</p>
+                            </span>
+                            <span>
+                                <p id="bot-status">Status</p>
+                                <div id="bot-status-indicator"></div>
+                            </span>
+                        </li>
+                        <li class="bot-item">
+                            <span>
+                                <img id="avatar" src="~/resources/intelliguide_icon.png" alt="avatar">
+                                <p id="bot-name">Bot 3</p>
+                            </span>
+                            <span>
+                                <p id="bot-status">Status</p>
+                                <div id="bot-status-indicator"></div>
+                            </span>
+                        </li>
+                        <li class="bot-item">
+                            <span>
+                                <img id="avatar" src="~/resources/intelliguide_icon.png" alt="avatar">
+                                <p id="bot-name">Bot 4</p>
+                            </span>
+                            <span>
+                                <p id="bot-status">Status</p>
+                                <div id="bot-status-indicator"></div>
+                            </span>
+                        </li>
+                    </ul>
+                    <h1>Notifications</h1>
+                    <ul class="list notifications">
+                        <li class="notification">
+                            <span>
+                                <p id="bot-name">Bot 1</p>
+                                <span>
+                                    <p id="notification-time">DD/MM/YYYY HH:MM</p>
+                                    <p id="notification-title">Notification title</p>
+                                </span>
+                            </span>
+                            <i class="fa-solid fa-envelope"></i>
+                        </li>
+                        <li class="notification">
+                            <span>
+                                <p id="bot-name">Bot 1</p>
+                                <span>
+                                    <p id="notification-time">DD/MM/YYYY HH:MM</p>
+                                    <p id="notification-title">Notification title</p>
+                                </span>
+                            </span>
+                            <i class="fa-solid fa-envelope"></i>
+                        </li>
+                        <li class="notification">
+                            <span>
+                                <p id="bot-name">Bot 1</p>
+                                <span>
+                                    <p id="notification-time">DD/MM/YYYY HH:MM</p>
+                                    <p id="notification-title">Notification title</p>
+                                </span>
+                            </span>
+                            <i class="fa-solid fa-envelope"></i>
+                        </li>
+                    </ul>
+                </div>
+                <div class="sidebar-bottom">
+                    <button type="button" class="sign-out-button" id="sign-out-button">Sign Out</button>
+                    <i class="fa-solid fa-sign-out sign-out-icon" id="sign-out-button"></i>
+                </div>
+            </div>
+            <div class="page">
+                <div class="navbar">
+                    <div class="menu-left">
+                        <h1 class="nav-item" id="status">Status</h1>
+                        <h1 class="nav-item" id="context">Context</h1>
+                        <h1 class="nav-item" id="settings">Settings</h1>
+                    </div>
+                    <div class="menu-right">
+                        <i id="search" class="fa-solid fa-magnifying-glass nav-item"></i>
+                        <i id="notifications" class="fa-solid fa-bell nav-item"></i>
+                    </div>
+                </div>
+                @RenderBody()
+            </div>
+        </div>
+    </div>
+</body>
+</html>

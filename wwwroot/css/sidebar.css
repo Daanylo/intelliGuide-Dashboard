@@ -1,0 +1,230 @@
+.logo-bar {
+    display: flex;
+    align-items: center;
+    height: 8vh;
+    padding: 0 2vh;
+    background-color: #222d44;
+}
+
+.logo-bar h1 {
+    margin-bottom: 0;
+    width: 100%;
+    transition: .3s;
+    display: block;
+}
+
+.logo {
+    width: 4vh;
+    object-fit: contain;
+    margin-right: 1vh;
+}
+
+.sidebar {
+    background-color: #3a4d77;
+    position: relative;
+    box-shadow: 10px 10px 20px rgba(0, 0, 0, 0.137);
+    z-index: 10;
+    min-width: 40vh;
+    color: white;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    gap: 1vh;
+    transition: cubic-bezier(0.075, 0.82, 0.165, 1) .5s;
+}
+
+.sidebar.collapsed {
+    min-width: 8vh;
+    width: 8vh;
+}
+
+.sidebar.collapsed .logo-bar h1{
+    width: 0%;
+    overflow: hidden;
+    display: block;
+}
+
+.sidebar.collapsed .resizer i {
+    rotate: 180deg;
+}
+
+.sidebar.collapsed h1, 
+.sidebar.collapsed #bot-name, 
+.sidebar.collapsed #bot-status,
+.sidebar.collapsed .notification span span {
+    display: none;
+}
+
+.sidebar.collapsed #bot-status-indicator {
+    position: absolute;
+    top: 1vh;
+    right: 2vh;
+}
+
+.sidebar.collapsed .notification {
+    justify-content: center;
+}
+
+.sidebar.collapsed button {
+    width: 0%;
+    padding: 0;
+}
+
+.sidebar.collapsed .sign-out-icon {
+    width: 3vh;
+    cursor: pointer;
+}
+
+.resizer {
+    position: absolute;
+    display: flex;
+    align-items: center;
+    justify-content: end;
+    padding: 2vh;
+    box-sizing: border-box;
+    top: 0;
+    right: -4vh;
+    width: 8vh;
+    height: 8vh;
+    border-radius: 50px;
+    background-color: #222d44;
+    cursor: pointer;
+    z-index: -1;
+}
+
+.resizer i {
+    font-size: 2vh;
+    transition: .3s;
+}
+
+.list.bots, .list.notifications {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    background-color: #3a4d77;
+    color: white;
+    overflow-y: auto;
+    list-style: none;
+    padding-left: 0;
+    margin: 0;
+    margin-bottom: 3vh;
+}
+
+.bot-item, .notification {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    padding: 1vh 2vh;
+    font-size: 2vh;
+    overflow: hidden;
+    box-shadow: 0px 0px 10px #00000000;
+    transition: .3s;
+    box-shadow: inset .5vh 0 0 #00000000;
+    position: relative;
+}
+
+.bot-item.selected {
+    background: linear-gradient(90deg, #00000000, #ffffff);
+    box-shadow: inset .5vh 0 0 rgb(255, 174, 0);
+    color: white;
+}
+
+.bot-item.selected #bot-status {
+    color: black;
+}
+
+.bot-item:hover, .notification:hover{
+    cursor: pointer;
+    background-color: #ffffff;
+    color: black;
+}
+
+.bot-item span {
+    display: flex;
+    align-items: center;
+    gap: 2vh;
+}
+
+#bot-name {
+    font-weight: bold;
+}
+
+#avatar, #bot-name, #bot-status, #bot-status-indicator {
+    display: inline-block;
+}
+
+#bot-status {
+    font-size: 1.5vh;
+    font-weight: 300;
+}
+
+#avatar {
+    border-style: solid;
+    border-radius: 50px;
+    overflow: hidden;
+    border-color: transparent;
+    height: 3vh;
+    width: 3vh;
+    background-color: white;
+    transition: .3s;
+}
+
+#bot-status-indicator {
+    width: 1.5vh;
+    height: 1.5vh;
+    border-radius: 50%;
+    background-color: orange;
+}
+
+.notification {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1vh 2vh;
+    font-size: 2vh;
+    overflow-y: auto;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0);
+    transition: .3s;
+}
+
+.notification span {
+    display: flex;
+    align-items: center;
+    gap: 2vh;
+}
+
+.notification span span {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 0;
+}
+
+#notification-time {
+    font-size: 1vh;
+    color: gray;
+}
+
+.sidebar-bottom {
+    width: 100%;
+    padding: 2vh;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    box-sizing: border-box;
+}
+
+.sign-out-button {
+    width: 100%;
+}
+
+.sign-out-icon {
+    font-size: 3vh;
+    width: 0;
+    overflow: hidden;
+    transition: .3s;
+}
+
+

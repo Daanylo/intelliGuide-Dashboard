@@ -1,0 +1,125 @@
+.row {
+    display: flex;
+    flex-direction: row;
+    gap: 2vh;
+    flex-grow: 1;
+}
+
+.section {
+    width: 50%;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    height: 100%;
+    gap: 2vh;
+}
+
+.new-context, .manage-context {
+    width: 100%;
+}
+
+#context-input {
+    width: 100%;
+    display: flex;
+    flex-grow: 1;
+    justify-content: start;
+}
+
+#save-buttons {
+    margin-left: auto;
+}
+
+#save-context-draft {
+    transition: .3s;
+    background-color: transparent;
+    border: solid 1px black;
+}
+
+#save-context-draft:hover, #save-context-active:hover {
+    background: black;
+    color: white;
+    cursor: pointer;
+}
+
+#save-context-active {
+    background: linear-gradient(-170deg, #00A2FF, #0066FF);
+    color: white;
+    transition: .3s;
+    border: solid 1px #00000000;
+}
+
+form input, form textarea {
+    font-family: inherit;
+    display: flex;
+    align-items: center;
+    height: 2vh;
+    padding: 2vh 2vh;
+    font-size: 2vh;
+    border: none;
+    background: #ffffff;
+    color: black;
+    box-sizing: border-box;
+    border: solid 1px #000000;
+    resize: none;
+}
+.list.context {
+    display: flex;
+    flex-direction: column;
+    gap: 2vh;
+    max-height: 80vh;
+    overflow: scroll;
+}
+
+.list.context .list-item {
+    background-color: white;
+    border: solid 1px #000000;
+}
+
+.info-box.manage-context {
+    display: flex;
+    flex-direction: column;
+    gap: 2vh;
+}
+
+.publish-dropdown {
+    position: relative;
+    border: solid 1px black;
+    padding: .5vh 1vh;
+}
+
+.publish-dropdown i {
+    cursor: pointer;
+}
+
+.publish-dropdown-content {
+    display: none;
+    margin-top: .5vh;
+    position: absolute;
+    left: -1px;
+    right: -1px;
+    background-color: white;
+    border-left: 1px solid black;
+    border-right: 1px solid black;
+    border-bottom: 1px solid black;
+    z-index: 1;
+}
+
+.publish-dropdown-content p {
+    padding: .5vh 1vh;
+}
+
+.publish-dropdown-content p:hover {
+    background-color: #f1f1f1;
+    cursor: pointer;
+}
+
+.publish-dropdown:hover .publish-dropdown-content {
+    display: block;
+}
+
+.list-item-top .title {
+    font-size: 2vh;
+}

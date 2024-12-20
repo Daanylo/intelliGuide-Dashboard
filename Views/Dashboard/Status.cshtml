@@ -1,0 +1,164 @@
+﻿@page
+@{
+    Layout = "_Dashboard-Layout";
+}
+<head>
+    <link rel="stylesheet" href="~/css/status.css">
+    <script src="~/js/status.js" defer></script>
+</head>
+<div class="section">
+    <div class="info-box current">
+        <form id="status-form">
+            <label for="status-input">Current Status <i class="fa-solid fa-circle-info"></i></label>
+            <input type="text" id="status-input" readonly>
+        </form>
+        <form id="tokens-form">
+            <label for="tokens-input">Total Tokens Used <i class="fa-solid fa-circle-info"></i></label>
+            <input type="text" id="tokens-input" readonly>
+        </form>
+        <form id="cost-form">
+            <label for="cost-input">Total Cost <i class="fa-solid fa-circle-info"></i></label>
+            <input type="text" id="cost-input" readonly>
+        </form>
+    </div>
+    <div class="info-box activity">
+        <label>Activity <i class="fa-solid fa-circle-info"></i></label>
+        <canvas id="activity-canvas"></canvas>
+    </div>
+</div>
+<div class="section">
+    <div class="info-box questions">
+        <label>Unanswered Questions <i class="fa-solid fa-circle-info"></i></label>
+        <ul class="list questions">
+            <li class="list-item">
+                <div class="list-item-top">
+                    <span>
+                        <p class="id">1234567</p>
+                        <p class="date">DD/MM/YYYY HH:MM</p>
+                    </span>
+                    <span>
+                        <i class="fa-solid fa-eye view"></i>
+                        <i class="fa-solid fa-trash-can delete"></i>
+                    </span>
+                </div>
+                <div id="question-content">
+                    <p id="question-content">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquid, veritatis quisquam voluptates labore alias in quas quos culpa exercitationem unde temporibus accusantium doloribus itaque distinctio vitae, non velit quae iure.</p>
+                </div>
+            </li>
+            <li class="list-item">
+                <div class="list-item-top">
+                    <span>
+                        <p class="id">1234567</p>
+                        <p class="date">DD/MM/YYYY HH:MM</p>
+                    </span>
+                    <span>
+                        <i class="fa-solid fa-eye view"></i>
+                        <i class="fa-solid fa-trash-can delete"></i>
+                    </span>
+                </div>
+                <div id="question-content">
+                    <p id="question-content">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquid, veritatis quisquam voluptates labore alias in quas quos culpa exercitationem unde temporibus accusantium doloribus itaque distinctio vitae, non velit quae iure.</p>
+                </div>
+            </li>
+            <li class="list-item">
+                <div class="list-item-top">
+                    <span>
+                        <p class="id">1234567</p>
+                        <p class="date">DD/MM/YYYY HH:MM</p>
+                    </span>
+                    <span>
+                        <i class="fa-solid fa-eye view"></i>
+                        <i class="fa-solid fa-trash-can delete"></i>
+                    </span>
+                </div>
+                <div id="question-content">
+                    <p id="question-content">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquid, veritatis quisquam voluptates labore alias in quas quos culpa exercitationem unde temporibus accusantium doloribus itaque distinctio vitae, non velit quae iure.</p>
+                </div>
+            </li>
+            <li class="list-item">
+                <div class="list-item-top">
+                    <span>
+                        <p class="id">1234567</p>
+                        <p class="date">DD/MM/YYYY HH:MM</p>
+                    </span>
+                    <span>
+                        <i class="fa-solid fa-eye view"></i>
+                        <i class="fa-solid fa-trash-can delete"></i>
+                    </span>
+                </div>
+                <div id="question-content">
+                    <p id="question-content">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquid, veritatis quisquam voluptates labore alias in quas quos culpa exercitationem unde temporibus accusantium doloribus itaque distinctio vitae, non velit quae iure.</p>
+                </div>
+            </li>
+        </ul>
+    </div>
+    <div class="info-box conversations">
+        <label>Conversations <i class="fa-solid fa-circle-info"></i></label>
+        <ul class="list conversations">
+            <li class="list-item">
+                <div class="list-item-top">
+                    <span>
+                        <p class="id">1234567</p>
+                        <p class="date">DD/MM/YYYY HH:MM</p>
+                    </span>
+                    <span>
+                        <p class="review">😐</p>
+                        <i class="fa-solid fa-eye view"></i>
+                        <i class="fa-solid fa-trash-can delete"></i>
+                    </span>
+                </div>
+                <div id="question-content">
+                    <p id="question-content">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquid, veritatis quisquam voluptates labore alias in quas quos culpa exercitationem unde temporibus accusantium doloribus itaque distinctio vitae, non velit quae iure.</p>
+                </div>
+            </li>
+            <li class="list-item">
+                <div class="list-item-top">
+                    <span>
+                        <p class="id">1234567</p>
+                        <p class="date">DD/MM/YYYY HH:MM</p>
+                    </span>
+                    <span>
+                        <p class="review">😐</p>
+                        <i class="fa-solid fa-eye view"></i>
+                        <i class="fa-solid fa-trash-can delete"></i>
+                    </span>
+                </div>
+                <div id="question-content">
+                    <p id="question-content">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquid, veritatis quisquam voluptates labore alias in quas quos culpa exercitationem unde temporibus accusantium doloribus itaque distinctio vitae, non velit quae iure.</p>
+                </div>
+            </li>
+            <li class="list-item">
+                <div class="list-item-top">
+                    <span>
+                        <p class="id">1234567</p>
+                        <p class="date">DD/MM/YYYY HH:MM</p>
+                    </span>
+                    <span>
+                        <p class="review">😐</p>
+                        <i class="fa-solid fa-eye view"></i>
+                        <i class="fa-solid fa-trash-can delete"></i>
+                    </span>
+                </div>
+                <div id="question-content">
+                    <p id="question-content">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquid, veritatis quisquam voluptates labore alias in quas quos culpa exercitationem unde temporibus accusantium doloribus itaque distinctio vitae, non velit quae iure.</p>
+                </div>
+            </li>
+            <li class="list-item">
+                <div class="list-item-top">
+                    <span>
+                        <p class="id">1234567</p>
+                        <p class="date">DD/MM/YYYY HH:MM</p>
+                    </span>
+                    <span>
+                        <p class="review">😐</p>
+                        <i class="fa-solid fa-eye view"></i>
+                        <i class="fa-solid fa-trash-can delete"></i>
+                    </span>
+                </div>
+                <div id="question-content">
+                    <p id="question-content">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquid, veritatis quisquam voluptates labore alias in quas quos culpa exercitationem unde temporibus accusantium doloribus itaque distinctio vitae, non velit quae iure.</p>
+                </div>
+            </li>
+        </ul>
+    </div>
+</div>
