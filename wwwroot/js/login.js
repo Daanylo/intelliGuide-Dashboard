@@ -7,7 +7,7 @@
         const rememberMe = document.getElementById('remember-me').checked;
 
         try {
-            const response = await fetch('Login/loginUser', {
+            const response = await fetch('Login/LoginUser', {
                 method: 'POST',
                 headers: {
                     'Content-Type': 'application/json'
@@ -18,14 +18,14 @@
             if (response.ok) {
                 const result = await response.json();
                 console.log('Login successful:', result);
-                location.href = '/Dashboard';
+                location.href = '/Dashboard/Status';
             } else {
                 console.error('Login failed:', response.statusText);
-                alert('Login failed:', response.statusText);
+                alert('Login failed');
             }
         } catch (error) {
             console.error('Error during login:', error);
-            alert('Error during login:', error);
+            alert('Error during login');
         }
     });
 });

@@ -1,0 +1,23 @@
+.settings-form {
+    display: flex;
+    flex-direction: column;
+    background-color: white;
+    border-radius: 2vh;
+    min-width: 40vh;
+    padding: 2vh;
+}
+
+.settings-form input, .settings-form select, .settings-form textarea {
+    margin-bottom: 1vh;
+    padding: 1vh;
+    font-size: 1.5vh;
+    border-radius: 2vh;
+    border: none;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.123);
+    font-family: inherit;
+}
+
+.page-content {
+    justify-content: center;
+    align-items: center;
+}

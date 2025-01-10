@@ -4,13 +4,12 @@ using System.Text;
 using System.Text.Json;
 namespace intelliGuideDashboard.Controllers
 {
-    [Route("[controller]")]
-    public class LoginController(ILogger<LoginController> logger, HttpClient httpClient) : Controller
+    public class LoginController(ILogger<LoginController> logger, HttpClient httpClient, IConfiguration configuration) : Controller
     {
-        private readonly ILogger<LoginController> _logger = logger;
-        private readonly HttpClient _httpClient = httpClient;
+        private readonly ILogger<LoginController> logger = logger;
+        private readonly HttpClient httpClient = httpClient;
+        private readonly IConfiguration configuration = configuration;
 
-        [HttpPost("loginUser")]
         public async Task<IActionResult> LoginUser([FromBody] LoginRequest loginRequest)
         {
             if (loginRequest == null || string.IsNullOrEmpty(loginRequest.Username) || string.IsNullOrEmpty(loginRequest.Password))
@@ -21,16 +20,16 @@ namespace intelliGuideDashboard.Controllers
             var jsonContent = JsonSerializer.Serialize(loginRequest);
             var content = new StringContent(jsonContent, Encoding.UTF8, "application/json");
 
-            var apiAddress = Environment.GetEnvironmentVariable("API_ADDRESS");
-            var apiKey = Environment.GetEnvironmentVariable("INTELLIGUIDE_API_KEY");
+            var apiAddress = configuration["intelliGuide:ApiAddress"];
+            var apiKey = configuration["intelliGuide:ApiKey"];
 
-            var request = new HttpRequestMessage(HttpMethod.Post, $"http://{apiAddress}/api/login")
+            var request = new HttpRequestMessage(HttpMethod.Post, $"{apiAddress}/api/login")
             {
                 Content = content
             };
             request.Headers.Add("x-api-key", apiKey);
 
-            var response = await _httpClient.SendAsync(request);
+            var response = await httpClient.SendAsync(request);
             if (response.IsSuccessStatusCode)
             {
                 var result = await response.Content.ReadAsStringAsync();
@@ -40,7 +39,7 @@ namespace intelliGuideDashboard.Controllers
                 {
                     return Unauthorized(new { Message = "Invalid username or password" });
                 }
-                HttpContext.Session.SetString("UserId", user.user_id.ToString());
+                HttpContext.Session.SetString("UserId", user.UserId.ToString());
                 if (loginRequest.RememberMe)
                 {
                     var cookieOptions = new CookieOptions
@@ -49,7 +48,7 @@ namespace intelliGuideDashboard.Controllers
                         HttpOnly = true,
                         IsEssential = true
                     };
-                    Response.Cookies.Append("UserId", user.user_id.ToString(), cookieOptions);
+                    Response.Cookies.Append("UserId", user.UserId.ToString(), cookieOptions);
                 }
                 return Ok(new { Message = "Login successful", Data = result });
             }
@@ -60,7 +59,6 @@ namespace intelliGuideDashboard.Controllers
             }
         }
 
-        [HttpGet("")]
         public IActionResult Login()
         {
             return View();

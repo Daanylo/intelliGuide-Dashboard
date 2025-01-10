@@ -2,3 +2,83 @@
 @{
     Layout = "_Dashboard-Layout";
 }
+<head>
+    <link rel="stylesheet" href="~/css/settings.css">
+    <script src="~/js/settings.js" defer></script>
+</head>
+<div class="page-content">
+    <form id="settings-form" class="settings-form" method="post">
+        <div class="heading">
+            <label for="name">Naam</label>
+            <div class="tooltip-container">
+                <i class="fa-solid fa-circle-info"></i>
+                <span class="tooltip">De bot refereert naar zichzelf met deze naam.</span>
+            </div>
+        </div>
+        <input type="text" name="name" title="Voer een naam in">
+
+        <div class="heading">
+            <label for="avatar">Avatar</label>
+            <div class="tooltip-container">
+                <i class="fa-solid fa-circle-info"></i>
+                <span class="tooltip">Deze avatar wordt alleen gebruikt voor identificatie in het dashboard.</span>
+            </div>
+        </div>
+        <input type="text" name="avatar" title="Voer een URL in van een afbeelding">
+
+        <div class="heading">
+            <label for="style">Spreekstijl</label>
+            <div class="tooltip-container">
+                <i class="fa-solid fa-circle-info"></i>
+                <span class="tooltip">De bot zal zich zoveel mogelijk aan deze stijl van spreken houden.</span>
+            </div>
+        </div>
+        <select name="style" title="Kies een spreekstijl">
+            <option value="formal">Formeel</option>
+            <option value="informal">Informeel</option>
+            <option value="goofy">Goofy</option>
+        </select>
+
+        <div class="heading">
+            <label for="voice">Stem</label>
+            <div class="tooltip-container">
+                <i class="fa-solid fa-circle-info"></i>
+                <span class="tooltip">Keuze tussen een mannenstem of een vrouwenstem.</span>
+            </div>
+        </div>
+        <select name="voice" title="Kies een stem">
+            <option value="male">Man</option>
+            <option value="female">Vrouw</option>
+        </select>
+
+        <div class="heading">
+            <label for="greeting">Begroeting</label>
+            <div class="tooltip-container">
+                <i class="fa-solid fa-circle-info"></i>
+                <span class="tooltip">De bot stuurt dit bericht aan het begin van het gesprek.</span>
+            </div>
+        </div>
+        <textarea type="text" name="greeting" title="Voer een begroeting in"></textarea>
+
+        <div class="heading">
+            <label for="location">Locatie</label>
+            <div class="tooltip-container">
+                <i class="fa-solid fa-circle-info"></i>
+                <span class="tooltip">De fysieke locatie waar de bot staat. De bot zal hiervan op de hoogte zijn.</span>
+            </div>
+        </div>
+        <input type="text" name="location" title="Voer een locatie in">
+
+        <div class="heading">
+            <label for="event">Evenement</label>
+            <div class="tooltip-container">
+                <i class="fa-solid fa-circle-info"></i>
+                <span class="tooltip">Wijs de bot toe aan een evenement.</span>
+            </div>
+        </div>
+        
+        <select name="event" title="Kies een evenement">
+        </select>
+        <button type="submit">Opslaan</button>
+    </form>
+</div>

@@ -2,3 +2,89 @@
 @{
     Layout = "_Dashboard-Layout";
 }
+<head>
+    <link rel="stylesheet" href="~/css/events.css" />
+    <script src="~/js/events.js" defer></script>
+</head>
+<div class="row">
+    <div class="section edit-event">
+        <form id="new-event-form" class="new-event-form">
+            <div class="edit-event-bar">
+                <div class="heading">
+                    <h2>Bewerk evenement</h2>
+                    <div class="tooltip-container">
+                        <i class="fa-solid fa-circle-info"></i>
+                        <span class="tooltip">Dit is de kennis die je aan de bot geeft. De titel heeft geen invloed op de context.</span>
+                    </div>
+                </div>
+                <button type="button" id="new-event">Nieuw</button>
+            </div>
+            <div class="heading">
+                <label for="name-input">Naam</label>
+                <div class="tooltip-container">
+                    <i class="fa-solid fa-circle-info"></i>
+                    <span class="tooltip">Dit is de kennis die je aan de bot geeft. De titel heeft geen invloed op de context.</span>
+                </div>
+            </div>
+            <input id="name-input" placeholder="Naam" required></input>
+
+            <div class="heading">
+                <label for="description-input">Beschrijving</label>
+                <div class="tooltip-container">
+                    <i class="fa-solid fa-circle-info"></i>
+                    <span class="tooltip">Dit is de kennis die je aan de bot geeft. De titel heeft geen invloed op de context.</span>
+                </div>
+            </div>
+            <textarea id="description-input" placeholder="Beschrijving"></textarea>
+
+            <div class="heading">
+                <label for="address-input">Adres</label>
+                <div class="tooltip-container">
+                    <i class="fa-solid fa-circle-info"></i>
+                    <span class="tooltip">Dit is de kennis die je aan de bot geeft. De titel heeft geen invloed op de context.</span>
+                </div>
+            </div>
+            <input type="text" id="address-input" placeholder="Adres"></input>
+
+            <div class="heading">
+                <label for="place-input">Plaats</label>
+                <div class="tooltip-container">
+                    <i class="fa-solid fa-circle-info"></i>
+                    <span class="tooltip">Dit is de kennis die je aan de bot geeft. De titel heeft geen invloed op de context.</span>
+                </div>
+            </div>
+            <input type="text" id="place-input" placeholder="Plaats"></input>
+            <div class="datetime">
+                <div class="heading">
+                    <label for="date-input">Datum</label>
+                    <div class="tooltip-container">
+                        <i class="fa-solid fa-circle-info"></i>
+                        <span class="tooltip">Dit is de kennis die je aan de bot geeft. De titel heeft geen invloed op de context.</span>
+                    </div>
+                </div>
+                <input type="date" id="date-input"></input>
+
+                <div class="heading">
+                    <label for="time-input">Tijd</label>
+                    <div class="tooltip-container">
+                        <i class="fa-solid fa-circle-info"></i>
+                        <span class="tooltip">Dit is de kennis die je aan de bot geeft. De titel heeft geen invloed op de context.</span>
+                    </div>
+                </div>
+                <input type="time" id="time-input"></input>
+            </div>
+            <button type="button" id="save-event">Opslaan</button>
+        </form>
+    </div>
+    <div class="section manage-events">
+            <div class="heading">
+                <h2>Evenementen beheren</h2>
+                <div class="tooltip-container">
+                    <i class="fa-solid fa-circle-info"></i>
+                    <span class="tooltip">Druk op het potloodje om de context te bewerken. Druk op het prullenbakje om de context te verwijderen.</span>
+                </div>
+            </div>
+            <ul class="list event" id="event-list">
+            </ul>
+    </div>
+</div>

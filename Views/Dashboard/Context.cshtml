@@ -11,158 +11,36 @@
     <div class="section">
         <div class="info-box new-context">
             <form id="new-context-form">
-                <label>New Context <i class="fa-solid fa-circle-info"></i></label>
-                <input id="title-input" placeholder="Title"></input>
+                <div class="edit-context-bar">
+                    <div class="heading">
+                        <h2>Bewerk context</h2>
+                        <div class="tooltip-container">
+                            <i class="fa-solid fa-circle-info"></i>
+                            <span class="tooltip">Dit is de kennis die je aan de bot geeft. De titel heeft geen invloed op de context.</span>
+                        </div>
+                    </div>
+                    <button type="button" id="new-context">Nieuw</button>
+                </div>
+
+                <input id="title-input" placeholder="Titel"></input>
                 <textarea id="context-input" placeholder="Context"></textarea>
-                <span id="save-buttons">
-                    <button id="save-context-draft">Save As Draft</button>
-                    <button id="save-context-active">Save & Activate</button>
+                <span class="save-buttons">
+                    <button type="button" id="save-context">Opslaan</button>
+                    <button type="button" id="save-context-activate">Opslaan & Activeer</button>
                 </span>
             </form>
         </div>
     </div>
     <div class="section">
         <div class="info-box manage-context">
-            <label>Manage Context <i class="fa-solid fa-circle-info"></i></label>
-            <ul class="list context">
-                <li class="list-item">
-                    <div class="list-item-top">
-                        <span>
-                            <p class="title">Title</p>
-                        </span>
-                        <span>
-                            <div class="publish-dropdown">
-                                <p>Status <i class="fa-solid fa-caret-down"></i></p>
-                                <div class="publish-dropdown-content">
-                                    <p class="publish-active">Active</p>
-                                    <p class="publish-draft">Draft</p>
-                                </div>
-                            </div>
-                            <i class="fa-solid fa-pen-to-square edit"></i>
-                            <i class="fa-solid fa-trash-can delete"></i>
-                        </span>
-                    </div>
-                    <div id="context-content">
-                        <p id="context-content">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquid,
-                            veritatis quisquam voluptates labore alias in quas quos culpa exercitationem unde temporibus
-                            accusantium doloribus itaque distinctio vitae, non velit quae iure.</p>
-                    </div>
-                </li>
-                <li class="list-item">
-                    <div class="list-item-top">
-                        <span>
-                            <p class="title">Title</p>
-                        </span>
-                        <span>
-                            <div class="publish-dropdown">
-                                <p>Status <i class="fa-solid fa-caret-down"></i></p>
-                                <div class="publish-dropdown-content">
-                                    <p class="publish-active">Active</p>
-                                    <p class="publish-draft">Draft</p>
-                                </div>
-                            </div>
-                            <i class="fa-solid fa-pen-to-square edit"></i>
-                            <i class="fa-solid fa-trash-can delete"></i>
-                        </span>
-                    </div>
-                    <div id="context-content">
-                        <p id="context-content">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquid,
-                            veritatis quisquam voluptates labore alias in quas quos culpa exercitationem unde temporibus
-                            accusantium doloribus itaque distinctio vitae, non velit quae iure.</p>
-                    </div>
-                </li>
-                <li class="list-item">
-                    <div class="list-item-top">
-                        <span>
-                            <p class="title">Title</p>
-                        </span>
-                        <span>
-                            <div class="publish-dropdown">
-                                <p>Status <i class="fa-solid fa-caret-down"></i></p>
-                                <div class="publish-dropdown-content">
-                                    <p class="publish-active">Active</p>
-                                    <p class="publish-draft">Draft</p>
-                                </div>
-                            </div>
-                            <i class="fa-solid fa-pen-to-square edit"></i>
-                            <i class="fa-solid fa-trash-can delete"></i>
-                        </span>
-                    </div>
-                    <div id="context-content">
-                        <p id="context-content">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquid,
-                            veritatis quisquam voluptates labore alias in quas quos culpa exercitationem unde temporibus
-                            accusantium doloribus itaque distinctio vitae, non velit quae iure.</p>
-                    </div>
-                </li>
-                <li class="list-item">
-                    <div class="list-item-top">
-                        <span>
-                            <p class="title">Title</p>
-                        </span>
-                        <span>
-                            <div class="publish-dropdown">
-                                <p>Status <i class="fa-solid fa-caret-down"></i></p>
-                                <div class="publish-dropdown-content">
-                                    <p class="publish-active">Active</p>
-                                    <p class="publish-draft">Draft</p>
-                                </div>
-                            </div>
-                            <i class="fa-solid fa-pen-to-square edit"></i>
-                            <i class="fa-solid fa-trash-can delete"></i>
-                        </span>
-                    </div>
-                    <div id="context-content">
-                        <p id="context-content">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquid,
-                            veritatis quisquam voluptates labore alias in quas quos culpa exercitationem unde temporibus
-                            accusantium doloribus itaque distinctio vitae, non velit quae iure.</p>
-                    </div>
-                </li>
-                <li class="list-item">
-                    <div class="list-item-top">
-                        <span>
-                            <p class="title">Title</p>
-                        </span>
-                        <span>
-                            <div class="publish-dropdown">
-                                <p>Status <i class="fa-solid fa-caret-down"></i></p>
-                                <div class="publish-dropdown-content">
-                                    <p class="publish-active">Active</p>
-                                    <p class="publish-draft">Draft</p>
-                                </div>
-                            </div>
-                            <i class="fa-solid fa-pen-to-square edit"></i>
-                            <i class="fa-solid fa-trash-can delete"></i>
-                        </span>
-                    </div>
-                    <div id="context-content">
-                        <p id="context-content">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquid,
-                            veritatis quisquam voluptates labore alias in quas quos culpa exercitationem unde temporibus
-                            accusantium doloribus itaque distinctio vitae, non velit quae iure.</p>
-                    </div>
-                </li>
-                <li class="list-item">
-                    <div class="list-item-top">
-                        <span>
-                            <p class="title">Title</p>
-                        </span>
-                        <span>
-                            <div class="publish-dropdown">
-                                <p>Status <i class="fa-solid fa-caret-down"></i></p>
-                                <div class="publish-dropdown-content">
-                                    <p class="publish-active">Active</p>
-                                    <p class="publish-draft">Draft</p>
-                                </div>
-                            </div>
-                            <i class="fa-solid fa-pen-to-square edit"></i>
-                            <i class="fa-solid fa-trash-can delete"></i>
-                        </span>
-                    </div>
-                    <div id="context-content">
-                        <p id="context-content">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquid,
-                            veritatis quisquam voluptates labore alias in quas quos culpa exercitationem unde temporibus
-                            accusantium doloribus itaque distinctio vitae, non velit quae iure.</p>
-                    </div>
-                </li>
+            <div class="heading">
+                <h2>Context beheren</h2>
+                <div class="tooltip-container">
+                    <i class="fa-solid fa-circle-info"></i>
+                    <span class="tooltip">Druk op het potloodje om de context te bewerken. Druk op het prullenbakje om de context te verwijderen.</span>
+                </div>
+            </div>
+            <ul class="list context" id="context-list">
             </ul>
         </div>
     </div>

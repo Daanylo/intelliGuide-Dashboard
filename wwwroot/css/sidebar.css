@@ -4,6 +4,11 @@
     height: 8vh;
     padding: 0 2vh;
     background-color: #222d44;
+    width: calc(100% + .5vh);
+    border-radius: 0 50px 50px 0;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
 }
 
 .logo-bar h1 {
@@ -11,6 +16,7 @@
     width: 100%;
     transition: .3s;
     display: block;
+    text-wrap: nowrap;
 }
 
 .logo {
@@ -48,14 +54,15 @@
     rotate: 180deg;
 }
 
-.sidebar.collapsed h1, 
+.sidebar.collapsed h2, 
 .sidebar.collapsed #bot-name, 
 .sidebar.collapsed #bot-status,
+.sidebar.collapsed #bot-location, 
 .sidebar.collapsed .notification span span {
     display: none;
 }
 
-.sidebar.collapsed #bot-status-indicator {
+.sidebar.collapsed .bot-status-indicator {
     position: absolute;
     top: 1vh;
     right: 2vh;
@@ -65,12 +72,12 @@
     justify-content: center;
 }
 
-.sidebar.collapsed button {
+.sidebar.collapsed .sign-out-button button {
     width: 0%;
     padding: 0;
 }
 
-.sidebar.collapsed .sign-out-icon {
+.sidebar.collapsed .sign-out-button i {
     width: 3vh;
     cursor: pointer;
 }
@@ -87,9 +94,8 @@
     width: 8vh;
     height: 8vh;
     border-radius: 50px;
-    background-color: #222d44;
     cursor: pointer;
-    z-index: -1;
+    z-index: 10;
 }
 
 .resizer i {
@@ -108,6 +114,7 @@
     padding-left: 0;
     margin: 0;
     margin-bottom: 3vh;
+    border-radius: 0;
 }
 
 .bot-item, .notification {
@@ -158,6 +165,10 @@
     font-weight: 300;
 }
 
+.bot-item.selected #bot-location {
+    color: #222d44;
+}
+
 #avatar {
     border-style: solid;
     border-radius: 50px;
@@ -169,11 +180,18 @@
     transition: .3s;
 }
 
-#bot-status-indicator {
+.bot-status-indicator {
     width: 1.5vh;
     height: 1.5vh;
     border-radius: 50%;
-    background-color: orange;
+}
+
+.bot-status-indicator.active {
+    background-color: rgb(80, 218, 80);
+}
+
+.bot-status-indicator.inactive {
+    background-color: rgb(255, 92, 92);
 }
 
 .notification {
@@ -218,9 +236,34 @@
 
 .sign-out-button {
     width: 100%;
+    display: inline-flex;
+    justify-content: center;
 }
 
-.sign-out-icon {
+
+.sign-out-button button {
+    border: none;
+    border-radius: 50px;
+    padding: 10px 20px;
+    font-size: 2vh;
+    transition: .2s ease;
+    overflow: hidden;
+    width: 100%;
+}
+
+.sign-out-button button:hover {
+    background-color: whitesmoke;
+}
+
+.sign-out-button button:active {
+    box-shadow: inset 0px 0.1em 0.6em #949494;
+}
+
+.sign-out-button button p {
+    color: white;
+}
+
+.sign-out-button i {
     font-size: 3vh;
     width: 0;
     overflow: hidden;

@@ -2,3 +2,66 @@
 @{
     Layout = "_Dashboard-Layout";
 }
+<head>
+    <script src="~/js/search.js" defer></script>
+    <link rel="stylesheet" href="~/css/search.css">
+</head>
+<div class="page-content">
+    <div class="search-container">
+        <form id="search-form" class="search-form" method="post">
+            <h2>Zoek naar een gesprek <i class="fa-solid fa-circle-info"></i></h2>
+            <div class="filter conversation-id">
+                <label for="conversation-id">Gesprek ID</label>
+                <input type="text" id="conversation-id" name="conversation-id" title="Zoek op gesprek ID" placeholder="Gesprek ID">
+            </div>
+            <div class="filter review">
+                <label for="review">Review</label>
+                <span>
+                    <input type="checkbox" id="review-0" name="review" value="0">
+                    <label for="review-0">🤬</label>
+                </span>
+                <span>
+                    <input type="checkbox" id="review-1" name="review" value="1">
+                    <label for="review-1">🙁</label>
+                </span>
+                <span>
+                    <input type="checkbox" id="review-2" name="review" value="2">
+                    <label for="review-2">😶</label>
+                </span>
+                <span>
+                    <input type="checkbox" id="review-3" name="review" value="3">
+                    <label for="review-3">😁</label>
+                </span>
+                <span>
+                    <input type="checkbox" id="review-4" name="review" value="4">
+                    <label for="review-4">😍</label>
+                </span>
+            </div>
+            <div class="filter datetime">
+                <label for="date">Datum & tijd</label>
+                <span>
+                    <label for="date-from">Van</label>
+                    <input type="date" id="date-from" name="date-from">
+                    <input type="time" id="time-from" name="time-from">
+                </span>
+                <span>
+                    <label for="date-to">Tot</label>
+                    <input type="date" id="date-to" name="date-to">
+                    <input type="time" id="time-to" name="time-to">
+                </span>
+            </div>
+            <div class="filter text-content">
+                <label for="text-content">Tekst</label>
+                <input type="text" id="text-content" name="text-content" title="Zoek op tekst" placeholder="Zoek op tekst">
+            </div>
+            <p class="reset-filters" id="reset-filters">Reset filters</p>
+            <button id="search-button" type="submit">Zoeken</button>
+        </form>
+
+    </div>
+    <div class="conversation-container">
+        <ul class="conversation-list" id="conversation-list">
+
+        </ul>
+    </div>
+</div>
