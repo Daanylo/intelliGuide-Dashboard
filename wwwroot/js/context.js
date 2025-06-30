@@ -20,7 +20,7 @@ document.addEventListener('DOMContentLoaded', async function() {
         }
     });
 
-    document.querySelector('.save-buttons').addEventListener('click', (event) => {
+    document.getElementById('save-context-activate').addEventListener('click', (event) => {
         let context = document.getElementById('context-input').value;
         let title = document.getElementById('title-input').value;
 
@@ -28,12 +28,7 @@ document.addEventListener('DOMContentLoaded', async function() {
             showError('Vul alle velden in');
             return;
         }
-
-        if (event.target.id === 'save-context') {
-            saveContext(null, context, title, false);
-        } else if (event.target.id === 'save-context-activate') {
-            saveContext(null, context, title, true);
-        }
+        saveContext(null, context, title, true);
     });
 
     document.getElementById('new-context').addEventListener('click', () => {

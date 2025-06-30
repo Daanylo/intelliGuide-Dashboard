@@ -28,17 +28,7 @@ form {
     justify-content: start;
 }
 
-.save-buttons {
-    margin-left: auto;
-}
-
-#save-context {
-    transition: .2s;
-    background-color: transparent;
-    border: solid 1px black;
-}
-
-#save-context:hover, #save-context-activate:hover, #new-context:hover {
+#save-context-activate:hover, #new-context:hover {
     background: #333333;
     color: white;
 }
@@ -48,6 +38,7 @@ form {
     color: white;
     transition: .2s;
     border: solid 1px #00000000;
+    align-self: flex-end;
 }
 
 form input, form textarea {

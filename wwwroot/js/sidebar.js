@@ -1,5 +1,7 @@
 document.addEventListener('DOMContentLoaded', async function() {
-    loadBots();
+    await loadBots();
+    const notifications = await getNotifications();
+        addNotificationsToSidebar(notifications);
     const sidebar = document.getElementById('sidebar');
     const resizer = document.getElementById('resizer');
     const signOutButton = document.getElementById('sign-out-button');
@@ -144,6 +146,8 @@ const setActiveBot = async (botId) => {
             item.classList.remove('selected');
         });
         document.getElementById(botId).classList.add('selected');
+        let botName = document.getElementById(botId).querySelector('#bot-name').textContent;
+        document.getElementById('currently-editing').innerText = `Aan het beheren: ${botName}`;
         if (window.location.href.includes('Status')) {
             getStatus();
             getConversationCount();
@@ -172,6 +176,80 @@ const setActiveBot = async (botId) => {
         showError('Failed to set active bot');
     }
 }
+
+const getNotifications = async() => {
+    const response = await fetch('/Dashboard/GetNotifications', {
+        method: 'GET',
+        headers: {
+            'Content-Type': 'application/json'
+        }
+    });
+    if (response.ok) {
+        const result = await response.json();
+        console.log('Notifications:', result);
+        const notifications = result.data;
+        return notifications;
+    } else {
+        console.error('Failed to get notifications:', response.statusText);
+        showError('Failed to get notifications');
+    }
+}
+
+const addNotificationsToSidebar = (notifications) => {
+    const notificationList = document.getElementById('notification-list');
+    notificationList.innerHTML = '';
+    notifications.forEach(notification => {
+        addNotificationToSidebar(notification);
+    });
+}
+
+const formatTimeAgo = (time) => {
+    const now = new Date();
+    const past = new Date(time);
+    const diffInSeconds = Math.floor((now - past) / 1000);
+
+    const units = [
+        { name: 'j', seconds: 31536000 },
+        { name: 'w', seconds: 604800 },
+        { name: 'd', seconds: 86400 },
+        { name: 'u', seconds: 3600 },
+        { name: 'm', seconds: 60 },
+        { name: 's', seconds: 1 }
+    ];
+
+    for (const unit of units) {
+        const interval = Math.floor(diffInSeconds / unit.seconds);
+        if (interval >= 1) {
+            return `${interval}${unit.name} geleden`;
+        }
+    }
+    return 'zojuist';
+}
+
+const addNotificationToSidebar = (notification) => {
+    const notificationList = document.getElementById('notification-list');
+    const notificationItem = document.createElement('li');
+    const bots = document.getElementById('bot-list').children;
+    const bot = Array.from(bots).find(b => b.id === notification.bot_id);
+    const botName = bot.querySelector('#bot-name').textContent;
+    notificationItem.classList.add('notification-item');
+    notificationItem.id = notification.help_id;
+    const message = notification.message.length > 30 ? `${notification.message.substring(0, 30)}...` : notification.message;
+    notificationItem.innerHTML =
+    `
+    <span>
+        <p id="bot-name">${botName}</p>
+        <span>
+            <p id="notification-time">${formatTimeAgo(notification.time)}</p>
+            <p id="notification-title">${message}</p>
+        </span>
+    </span>
+    <i class="fa-solid fa-envelope"></i>
+    `;
+    notificationList.appendChild(notificationItem);
+}
+
+
 
 const getActiveBot = async() => {
     const response = await fetch('/Dashboard/GetActiveBot', {

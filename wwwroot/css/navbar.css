@@ -2,12 +2,18 @@
     display: flex;
     flex-direction: row;
     justify-content: space-between;
+    align-items: center;
     height: 8vh;
     min-height: 8vh;
     padding: 0 2vh;
     padding-left: 6vh;
     background: linear-gradient(-170deg, #00A2FF, #0066FF);
     color: white;
+}
+
+.currently-editing {
+    margin: 0;
+    opacity: 50%;
 }
 
 .nav-item {

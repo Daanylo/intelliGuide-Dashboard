@@ -296,8 +296,8 @@ const addConversation = (conversation) => {
     conversationItem.innerHTML = 
     `<div class="list-item-top">
         <span>
-            <p class="id" id="conversation-id">${conversation.conversation_id}</p>
-            <p class="date" id="conversation-date">${formatTime(conversation.time)}</p>
+            <p class="id" id="conversation-id">${formatTimeAgo(conversation.time)}</p>
+            <p class="date" id="conversation-date">${conversation.conversation_id}</p>
         </span>
         <span>
             <p class="review" id="conversation_review">${review}</p>
@@ -311,12 +311,7 @@ const addConversation = (conversation) => {
     getMessages(conversation.conversation_id);
 }
 
-const formatTime = (time) => {
-    return new Date(time)
-    .toISOString()
-    .slice(0, 16)
-    .replace('T', ' ');
-}
+
 
 const addMessage = (message) => {
     let conversationItem = document.getElementById(message.conversation_id);
@@ -366,8 +361,8 @@ const addUnansweredQuestion = (question) => {
     questionItem.innerHTML = 
     `<div class="list-item-top">
         <span>
-            <p class="id">${question.message_id}</p>
-            <p class="date">${formatTime(question.time)}</p>
+            <p class="id">${formatTimeAgo(question.time)}</p>
+            <p class="date">${question.message_id}</p>
         </span>
         <span>
             <i class="fa-solid fa-eye view" data-conversation-id="${question.conversation_id}"></i>

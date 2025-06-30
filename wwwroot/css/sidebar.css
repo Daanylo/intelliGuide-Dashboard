@@ -58,7 +58,7 @@
 .sidebar.collapsed #bot-name, 
 .sidebar.collapsed #bot-status,
 .sidebar.collapsed #bot-location, 
-.sidebar.collapsed .notification span span {
+.sidebar.collapsed .notification-item span span {
     display: none;
 }
 
@@ -68,7 +68,7 @@
     right: 2vh;
 }
 
-.sidebar.collapsed .notification {
+.sidebar.collapsed .notification-item {
     justify-content: center;
 }
 
@@ -117,7 +117,7 @@
     border-radius: 0;
 }
 
-.bot-item, .notification {
+.bot-item, .notification-item {
     display: flex;
     flex-direction: row;
     justify-content: space-between;
@@ -140,7 +140,7 @@
     color: black;
 }
 
-.bot-item:hover, .notification:hover{
+.bot-item:hover, .notification-item:hover{
     cursor: pointer;
     background-color: #ffffff;
     color: black;
@@ -194,7 +194,7 @@
     background-color: rgb(255, 92, 92);
 }
 
-.notification {
+.notification-item {
     display: flex;
     flex-direction: row;
     justify-content: space-between;
@@ -206,13 +206,13 @@
     transition: .3s;
 }
 
-.notification span {
+.notification-item span {
     display: flex;
     align-items: center;
     gap: 2vh;
 }
 
-.notification span span {
+.notification-item span span {
     display: flex;
     flex-direction: column;
     align-items: flex-start;

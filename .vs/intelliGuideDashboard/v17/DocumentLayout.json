@@ -3,6 +3,14 @@
   "WorkspaceRootPath": "C:\\Users\\Daan\\source\\repos\\intelliGuideDashboard\\",
   "Documents": [
     {
+      "AbsoluteMoniker": "D:0:0:{5BB7C3E5-210B-45ED-B168-EF87B5801C48}|intelliGuideDashboard.csproj|c:\\users\\daan\\source\\repos\\intelliguidedashboard\\controllers\\dashboardcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{5BB7C3E5-210B-45ED-B168-EF87B5801C48}|intelliGuideDashboard.csproj|solutionrelative:controllers\\dashboardcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{5BB7C3E5-210B-45ED-B168-EF87B5801C48}|intelliGuideDashboard.csproj|c:\\users\\daan\\source\\repos\\intelliguidedashboard\\wwwroot\\js\\status.js||{14D17961-FE51-464D-9111-C4AF11D7D99A}",
+      "RelativeMoniker": "D:0:0:{5BB7C3E5-210B-45ED-B168-EF87B5801C48}|intelliGuideDashboard.csproj|solutionrelative:wwwroot\\js\\status.js||{14D17961-FE51-464D-9111-C4AF11D7D99A}"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{5BB7C3E5-210B-45ED-B168-EF87B5801C48}|intelliGuideDashboard.csproj|c:\\users\\daan\\source\\repos\\intelliguidedashboard\\properties\\launchsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
       "RelativeMoniker": "D:0:0:{5BB7C3E5-210B-45ED-B168-EF87B5801C48}|intelliGuideDashboard.csproj|solutionrelative:properties\\launchsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
     },
@@ -78,7 +86,7 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 10,
+          "SelectedChildIndex": 3,
           "Children": [
             {
               "$type": "Bookmark",
@@ -90,7 +98,33 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 5,
+              "DocumentIndex": 1,
+              "Title": "status.js",
+              "DocumentMoniker": "C:\\Users\\Daan\\source\\repos\\intelliGuideDashboard\\wwwroot\\js\\status.js",
+              "RelativeDocumentMoniker": "wwwroot\\js\\status.js",
+              "ToolTip": "C:\\Users\\Daan\\source\\repos\\intelliGuideDashboard\\wwwroot\\js\\status.js",
+              "RelativeToolTip": "wwwroot\\js\\status.js",
+              "ViewState": "AgIAACcAAAAAAAAAAAAAADMAAAAaAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001646|",
+              "WhenOpened": "2025-01-20T14:18:41.316Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "DashboardController.cs",
+              "DocumentMoniker": "C:\\Users\\Daan\\source\\repos\\intelliGuideDashboard\\Controllers\\DashboardController.cs",
+              "RelativeDocumentMoniker": "Controllers\\DashboardController.cs",
+              "ToolTip": "C:\\Users\\Daan\\source\\repos\\intelliGuideDashboard\\Controllers\\DashboardController.cs",
+              "RelativeToolTip": "Controllers\\DashboardController.cs",
+              "ViewState": "AgIAAJMCAAAAAAAAAAAUwAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-01-20T14:17:07.96Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
               "Title": "appsettings.json",
               "DocumentMoniker": "C:\\Users\\Daan\\source\\repos\\intelliGuideDashboard\\appsettings.json",
               "RelativeDocumentMoniker": "appsettings.json",
@@ -102,7 +136,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 6,
+              "DocumentIndex": 8,
               "Title": "SessionCheckFilter.cs",
               "DocumentMoniker": "C:\\Users\\Daan\\source\\repos\\intelliGuideDashboard\\Filters\\SessionCheckFilter.cs",
               "RelativeDocumentMoniker": "Filters\\SessionCheckFilter.cs",
@@ -114,7 +148,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 4,
+              "DocumentIndex": 6,
               "Title": "LoginController.cs",
               "DocumentMoniker": "C:\\Users\\Daan\\source\\repos\\intelliGuideDashboard\\Controllers\\LoginController.cs",
               "RelativeDocumentMoniker": "Controllers\\LoginController.cs",
@@ -126,7 +160,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 9,
+              "DocumentIndex": 11,
               "Title": "_Dashboard-Layout.cshtml",
               "DocumentMoniker": "C:\\Users\\Daan\\source\\repos\\intelliGuideDashboard\\Views\\Shared\\_Dashboard-Layout.cshtml",
               "RelativeDocumentMoniker": "Views\\Shared\\_Dashboard-Layout.cshtml",
@@ -138,7 +172,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 8,
+              "DocumentIndex": 10,
               "Title": "Notifications.cshtml",
               "DocumentMoniker": "C:\\Users\\Daan\\source\\repos\\intelliGuideDashboard\\Views\\Dashboard\\Notifications.cshtml",
               "RelativeDocumentMoniker": "Views\\Dashboard\\Notifications.cshtml",
@@ -150,7 +184,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 4,
               "Title": "Status.cshtml",
               "DocumentMoniker": "C:\\Users\\Daan\\source\\repos\\intelliGuideDashboard\\Views\\Dashboard\\Status.cshtml",
               "RelativeDocumentMoniker": "Views\\Dashboard\\Status.cshtml",
@@ -162,7 +196,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 7,
+              "DocumentIndex": 9,
               "Title": "login.js",
               "DocumentMoniker": "C:\\Users\\Daan\\source\\repos\\intelliGuideDashboard\\wwwroot\\js\\login.js",
               "RelativeDocumentMoniker": "wwwroot\\js\\login.js",
@@ -174,7 +208,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 10,
+              "DocumentIndex": 12,
               "Title": "login.css",
               "DocumentMoniker": "C:\\Users\\Daan\\source\\repos\\intelliGuideDashboard\\wwwroot\\css\\login.css",
               "RelativeDocumentMoniker": "wwwroot\\css\\login.css",
@@ -186,7 +220,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
+              "DocumentIndex": 2,
               "Title": "launchSettings.json",
               "DocumentMoniker": "C:\\Users\\Daan\\source\\repos\\intelliGuideDashboard\\Properties\\launchSettings.json",
               "RelativeDocumentMoniker": "Properties\\launchSettings.json",
@@ -199,7 +233,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
+              "DocumentIndex": 5,
               "Title": ".gitignore",
               "DocumentMoniker": "C:\\Users\\Daan\\source\\repos\\intelliGuideDashboard\\.gitignore",
               "RelativeDocumentMoniker": ".gitignore",
@@ -211,7 +245,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 13,
+              "DocumentIndex": 15,
               "Title": "Events.cshtml",
               "DocumentMoniker": "C:\\Users\\Daan\\source\\repos\\intelliGuideDashboard\\Views\\Dashboard\\Events.cshtml",
               "RelativeDocumentMoniker": "Views\\Dashboard\\Events.cshtml",
@@ -223,7 +257,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 12,
+              "DocumentIndex": 14,
               "Title": "Search.cshtml",
               "DocumentMoniker": "C:\\Users\\Daan\\source\\repos\\intelliGuideDashboard\\Views\\Dashboard\\Search.cshtml",
               "RelativeDocumentMoniker": "Views\\Dashboard\\Search.cshtml",
@@ -235,7 +269,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 3,
               "Title": "Program.cs",
               "DocumentMoniker": "C:\\Users\\Daan\\source\\repos\\intelliGuideDashboard\\Program.cs",
               "RelativeDocumentMoniker": "Program.cs",
@@ -247,7 +281,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 16,
+              "DocumentIndex": 18,
               "Title": "Context.cshtml",
               "DocumentMoniker": "C:\\Users\\Daan\\source\\repos\\intelliGuideDashboard\\Views\\Dashboard\\Context.cshtml",
               "RelativeDocumentMoniker": "Views\\Dashboard\\Context.cshtml",
@@ -259,7 +293,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 14,
+              "DocumentIndex": 16,
               "Title": "Settings.cshtml",
               "DocumentMoniker": "C:\\Users\\Daan\\source\\repos\\intelliGuideDashboard\\Views\\Dashboard\\Settings.cshtml",
               "RelativeDocumentMoniker": "Views\\Dashboard\\Settings.cshtml",
@@ -271,7 +305,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 11,
+              "DocumentIndex": 13,
               "Title": "_Layout.cshtml",
               "DocumentMoniker": "C:\\Users\\Daan\\source\\repos\\intelliGuideDashboard\\Views\\Shared\\_Layout.cshtml",
               "RelativeDocumentMoniker": "Views\\Shared\\_Layout.cshtml",
@@ -283,7 +317,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 15,
+              "DocumentIndex": 17,
               "Title": "Login.cshtml",
               "DocumentMoniker": "C:\\Users\\Daan\\source\\repos\\intelliGuideDashboard\\Views\\Login\\Login.cshtml",
               "RelativeDocumentMoniker": "Views\\Login\\Login.cshtml",

@@ -103,6 +103,7 @@ namespace intelliGuideDashboard.Controllers
                 return BadRequest(new { Message = "GetBots failed", Error = error });
             }
         }
+
         [HttpPost]
         public IActionResult SetActiveBot([FromBody] JsonElement data)
         {
@@ -342,6 +343,63 @@ namespace intelliGuideDashboard.Controllers
             } else {
                 var error = await response.Content.ReadAsStringAsync();
                 return BadRequest(new { Message = "Conversation request failed", Error = error });
+            }
+        }
+
+        public async Task<IActionResult> GetNotifications()
+        {
+            var userId = HttpContext.Session.GetString("UserId");
+            if (string.IsNullOrEmpty(userId))
+            {
+                return Unauthorized(new { Message = "Unauthorized" });
+            }
+            var apiAddress = configuration["intelliGuide:ApiAddress"];
+            var apiKey = configuration["intelliGuide:ApiKey"];
+
+            var request = new HttpRequestMessage(HttpMethod.Get, $"{apiAddress}/api/help/{userId}");
+            request.Headers.Add("x-api-key", apiKey);
+
+            var response = await httpClient.SendAsync(request);
+
+            if (response.IsSuccessStatusCode)
+            {
+                var result = await response.Content.ReadAsStringAsync();
+                var notifications = JsonSerializer.Deserialize<List<Help>>(result);
+                if (notifications == null)
+                {
+                    return NotFound(new { Message = "Notifications not found" });
+                }
+                return Ok(new { Message = "Notifications request successful", Data = notifications });
+            } else {
+                var error = await response.Content.ReadAsStringAsync();
+                return BadRequest(new { Message = "Notifications request failed", Error = error });
+            }
+        }
+
+        public async Task<IActionResult> DeleteConversation([FromBody] JsonElement data)
+        {
+            var conversationId = data.GetProperty("conversationId").GetString();
+            if (string.IsNullOrEmpty(conversationId))
+            {
+                return NotFound(new { Message = "Conversation not found" });
+            }
+
+            var apiAddress = configuration["intelliGuide:ApiAddress"];
+            var apiKey = configuration["intelliGuide:ApiKey"];
+
+            var request = new HttpRequestMessage(HttpMethod.Delete, $"{apiAddress}/api/conversation/{conversationId}");
+            request.Headers.Add("x-api-key", apiKey);
+
+            var response = await httpClient.SendAsync(request);
+
+            if (response.IsSuccessStatusCode)
+            {
+                return Ok(new { Message = "Conversation delete successful" });
+            }
+            else
+            {
+                var error = await response.Content.ReadAsStringAsync();
+                return BadRequest(new { Message = "Conversation delete failed", Error = error });
             }
         }
 

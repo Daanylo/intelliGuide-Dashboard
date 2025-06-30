@@ -99,10 +99,42 @@ const searchConversations = async(searchModel) => {
                 conversations.forEach(conversation => {
                     addConversation(conversation);
                 });
+                document.querySelectorAll('.delete').forEach(deleteButton => {
+                    deleteButton.addEventListener('click', () => {
+                        let conversationId = deleteButton.getAttribute('data-conversation-id');
+                        deleteConversation(conversationId);
+                    });
+                });
+
             });
         } else {
             console.error('Failed to search conversation:', response.statusText);
             showError('Failed to search conversation');
+        }
+    });
+};
+
+const deleteConversation = async (conversationId) => {
+    if (!confirm('Weet je zeker dat je dit gesprek wil verwijderen?')) {
+        return;
+    }
+    fetch('/Dashboard/DeleteConversation', {
+        method: 'POST',
+        headers: {
+            'Content-Type': 'application/json'
+        },
+        body: JSON.stringify({ conversationId })
+    }).then(response => {
+        if (response.ok) {
+            response.json().then(result => {
+                console.log('Delete:', result);
+                let conversationItem = document.getElementById(conversationId);
+                conversationItem.remove();
+                showSuccess('Gesprek verwijderd');
+            });
+        } else {
+            console.error('Failed to delete conversation:', response.statusText);
+            showError('Kon gesprek niet verwijderen');
         }
     });
 };
@@ -183,7 +215,7 @@ const addConversation = (conversation) => {
         </span>
         <span>
             <p class="review" id="conversation_review">${review}</p>
-            <i class="fa-solid fa-trash-can delete" id="delete-conversation"></i>
+            <i class="fa-solid fa-trash-can delete" id="delete-conversation" data-conversation-id="${conversation.conversation_id}"></i>
         </span>
     </div>
     <div class="list-item-middle">
