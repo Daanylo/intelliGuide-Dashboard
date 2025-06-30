@@ -216,3 +216,7 @@ This project was created for educational purposes at Fontys ICT Eindhoven.
 ---
 
 *Part of the IntelliGuide ecosystem - Making events smarter with AI-powered assistance* 🚀
+
+<div align="center">
+    <img src="https://mmmlabel.tech/wp-content/themes/mmmlabel/icons/color/128px/handyman/handyman.svg" alt="Assisted by genAI" height="100">
+</div>
