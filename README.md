@@ -54,7 +54,7 @@ This project is part of the larger IntelliGuide ecosystem:
 1. **Clone the repository**
    ```bash
    git clone <repository-url>
-   cd intelliGuideDashboard
+   cd intelliGuide-Dashboard
    ```
 
 2. **Install dependencies**
@@ -92,7 +92,7 @@ Update the following settings in `appsettings.Development.json`:
 ## 📁 Project Structure
 
 ```
-intelliGuideDashboard/
+intelliGuide-Dashboard/
 ├── Controllers/           # MVC Controllers
 │   ├── DashboardController.cs
 │   └── LoginController.cs
